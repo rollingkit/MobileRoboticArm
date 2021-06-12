@@ -7,7 +7,7 @@ void callback_receive_detect(const vision_msgs::Detection2DArrayConstPtr det_msg
 }
 
 int main(int argc, char **argv){
-  ros::init(argc, argv, "inter_1");
+  ros::init(argc, argv, "inter");
   ros::NodeHandle nh;
 
   ros::Subscriber sub = nh.subscribe("detectnet/detections", 1000, callback_receive_detect);
