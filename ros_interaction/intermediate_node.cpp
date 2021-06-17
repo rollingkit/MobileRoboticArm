@@ -10,15 +10,15 @@ class TestRos{
   std_msgs::String output_msg;
   float x_co;
   float y_co;
-  float l_xlimit = 630;
-  float u_xlimit = 830;
+  //float l_xlimit = 630;
+  //float u_xlimit = 830;
 
   void callback_receive_detection(const vision_msgs::Detection2DArrayConstPtr det_msg){
     ROS_INFO("%f", det_msg->detections[0].bbox.center.x);
     x_co = det_msg->detections[0].bbox.center.x;
     y_co = det_msg->detections[0].bbox.center.y;
 
-    if((x_co > l_xlimit) && (x_co < u_xlimit)){
+    if((x_co > 500) && (x_co < 800)){
       output_msg.data = "Keep going";
     }else{
       output_msg.data = "Stop!";
