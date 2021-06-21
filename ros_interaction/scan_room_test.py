@@ -9,16 +9,14 @@ from std_msgs.msg import String
 # To get started, open a terminal and type 'roslaunch interbotix_sdk arm_run.launch robot_name:=wx250s use_time_based_profile:=true gripper_operating_mode:=pwm'
 # Then change to this directory and type 'python scan_room_test.py'
 
-cmd_msg = 2
+cmd_msg = ""
 
 def callback_rec(msg):
     #rospy.loginfo("Message received: ")
-    rospy.loginfo(msg)
-    if msg.data == "Stop!":
-	cmd_msg = 1
-    elif msg.data == "Keep going":
-	cmd_msg = 2
-	
+    #rospy.loginfo(msg)
+    global cmd_msg
+    cmd_msg = msg.data
+    #rospy.loginfo(cmd_msg)
 
 def main():
     arm = InterbotixRobot(robot_name="rx150", mrd=mrd)
@@ -26,13 +24,14 @@ def main():
 
     arm.set_ee_pose_components(x=0.2, z=0.3)
     arm.set_single_joint_position("waist", np.pi/2.0)
-    #angle_dec = np.pi/36.0 # 5 degree increments
-    angle_dec = np.pi/18.0
+    angle_dec = np.pi/36.0 # 5 degree increments
+    #angle_dec = np.pi/18.0 # 10 degree increments
     count = 1
     while np.pi/2.0 - (count*angle_dec) > 0:
 	#print(cmd_msg)
-	#rospy.loginfo(cmd_msg)
-	if cmd_msg ==1:
+	global cmd_msg
+	rospy.loginfo(cmd_msg)
+	if cmd_msg == "Stop!":
 		break
 	else:
 		arm.set_single_joint_position("waist", np.pi/2.0 - (count*angle_dec))
