@@ -1,13 +1,14 @@
+#include <ros/ros.h>
 #include <linux/types.h>
 #include <cstdio>
 
-#include <include/lidarlite_v3.h>
+#include <lidar_library/lidarlite_v3.h>
 #include <std_msgs/UInt16.h>
 
 LIDARLite_v3 myLidarLite;
 
-int main(int argc char **argv){
-
+int main(int argc, char **argv)
+{
   __u16 distance;
   __u8 busyFlag;
 
@@ -24,10 +25,10 @@ int main(int argc char **argv){
 
     while(1){
       busyFlag = myLidarLite.getBusyFlag();
-
-      if(busyFlag == 0x00){
+      if (busyFlag == 0x00){
         myLidarLite.takeRange();
         distance = myLidarLite.readDistance();
+        //printf("%4d\n", distance);
         std_msgs::UInt16 msg;
         msg.data = distance;
         pub.publish(msg);
