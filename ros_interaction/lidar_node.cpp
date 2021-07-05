@@ -1,3 +1,8 @@
+//Prior to compiling anr running this node, need to make a ros package with the library from the LidarLite v3 for
+//Raspberry Pi given here: https://github.com/garmin/LIDARLite_RaspberryPi_Library
+//After that the CMakeLists.txt of your package needs to be updated to include the relevant header files from the library. 
+
+
 #include <ros/ros.h>
 #include <linux/types.h>
 #include <cstdio>
