@@ -2,6 +2,8 @@
 //Raspberry Pi given here: https://github.com/garmin/LIDARLite_RaspberryPi_Library
 //After that the CMakeLists.txt of your package needs to be updated to include the relevant header files from the library. 
 
+//Author: Sivankit Bhanot
+
 
 #include <ros/ros.h>
 #include <linux/types.h>
