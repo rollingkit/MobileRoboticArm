@@ -42,6 +42,8 @@ Then the node can also be run using the rosrun command. Once the node is running
 
 ### LIDAR Node ###
 
+![alt text](https://github.com/rollingkit/MobileRoboticArm/blob/main/lidar_node_1.jpeg)
+![alt text](https://github.com/rollingkit/MobileRoboticArm/blob/main/lidar_node_2.jpeg)
 
 
 
