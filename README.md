@@ -1,6 +1,8 @@
 # MobileRoboticArm
 Includes code and scripts for working with the Interbotix Reactor X 150 Robotic Arm, Camera and Lidar modules, all operating on the Nvidia Jetson Nano. 
 
+To get a better understanding of the setup, consult the Report and Poster. 
+
 
 In ros_interaction:
 inter_1 contains the 'inter' node which simply subscribes to the /detections topic of detectnet node from Dusty's code. 
