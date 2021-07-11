@@ -30,5 +30,6 @@ Once this is running, use rosrun intermediate to run the intermediate node.
 Use rostopic echo movement_status to see how the detected object's place in the video view window affects the message of either 'Stop' or 'Keep Going'. 
 
 To run the LIDAR node, need to create a catkin package with the C++ libraries provided at https://github.com/garmin/LIDARLite_RaspberryPi_Library.
-Then the node can also be run using the rosrun command. 
+Then the node can also be run using the rosrun command. Once the node is running, open another terminal window and type 'rostopic echo lidar_values' to see the LIDAR measurements displayed. 
+
 
