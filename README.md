@@ -35,5 +35,7 @@ To run the LIDAR node, need to create a catkin package with the C++ libraries pr
 Then the node can also be run using the rosrun command. Once the node is running, open another terminal window and type 'rostopic echo lidar_values' to see the LIDAR measurements displayed. 
 
 ![alt text](https://github.com/rollingkit/MobileRoboticArm/blob/main/obdec_1.jpeg)
+![alt text](https://github.com/rollingkit/MobileRoboticArm/blob/main/obdec_2.jpeg)
+![alt text](https://github.com/rollingkit/MobileRoboticArm/blob/main/obdec_3.jpeg)
 
 
