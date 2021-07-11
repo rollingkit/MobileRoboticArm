@@ -34,12 +34,14 @@ Use rostopic echo movement_status to see how the detected object's place in the 
 To run the LIDAR node, need to create a catkin package with the C++ libraries provided at https://github.com/garmin/LIDARLite_RaspberryPi_Library.
 Then the node can also be run using the rosrun command. Once the node is running, open another terminal window and type 'rostopic echo lidar_values' to see the LIDAR measurements displayed. 
 
+### Camera Object Detection & Message in relation to object placement on screen ###
+
 ![alt text](https://github.com/rollingkit/MobileRoboticArm/blob/main/obdec_1.jpeg)
 ![alt text](https://github.com/rollingkit/MobileRoboticArm/blob/main/obdec_2.jpeg)
 ![alt text](https://github.com/rollingkit/MobileRoboticArm/blob/main/obdec_3.jpeg)
 
-![test image size](https://github.com/rollingkit/MobileRoboticArm/blob/main/obdec_1.jpeg){:class="img-responsive"}
-![test image size](https://github.com/rollingkit/MobileRoboticArm/blob/main/obdec_1.jpeg){:height="50%" width="50%"}
-![test image size](https://github.com/rollingkit/MobileRoboticArm/blob/main/obdec_1.jpeg){:height="700px" width="400px"}
+### LIDAR Node ###
+
+
 
 
